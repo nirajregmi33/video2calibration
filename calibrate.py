@@ -70,7 +70,7 @@ if __name__ == '__main__':
             cv2.drawChessboardCorners(img_chess, pattern_size, corners, found)
             cv2.imwrite(os.path.join(args.debug_dir, '%04d.png' % i), img_chess)
         if not found:
-            print 'not found'
+            print ('not found')
             continue
         img_points.append(corners.reshape(1, -1, 2))
         obj_points.append(pattern_points.reshape(1, -1, 3))
